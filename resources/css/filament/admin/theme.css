@@ -1,0 +1,28 @@
+@import '/vendor/filament/filament/resources/css/theme.css';
+
+@config 'tailwind.config.js';
+
+
+/* .fi-simple-layout { 
+    @apply bg-cyan-100/50;
+}
+ 
+.fi-simple-main {
+    @apply bg-emerald-100/50;
+} */
+
+.fi-simple-layout {
+    /* @apply bg-cyan-100/50; */
+    background-image:url('/frontends/front_school.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+.fi-simple-main {
+    /* @apply bg-emerald-100/50;
+    background-image: url('/frontends/front_school.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+}
