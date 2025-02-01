@@ -29,6 +29,9 @@
 
     <!-- backtotop - start -->
     <div class="xb-backtotop">
+        <a href="https://wa.me/+6281364424806" target="_blank"  class="whatsapp">
+            <i class="fab fa-whatsapp" style="font-size: 22px;"></i>
+        </a>
         <a href="#" class="scroll">
             <i class="far fa-arrow-up"></i>
         </a>
@@ -36,13 +39,13 @@
     <!-- backtotop - end -->
 
     <!-- Preloader - Start -->
-    {{-- <div id="preloader">
+    <div id="preloader">
         <div id="loader" class="loader">
             <div class="loader-container">
                 <div class="loader-icon"><img src="{{ asset('frontends/logo_sdk.png') }}" alt="preloader"></div>
             </div>
         </div>
-    </div> --}}
+    </div>
     <!-- Preloader - End -->
 
     <div class="body_wrap">

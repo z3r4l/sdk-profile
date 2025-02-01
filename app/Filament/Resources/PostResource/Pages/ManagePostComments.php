@@ -19,7 +19,7 @@ class ManagePostComments extends ManageRelatedRecords
     protected static string $relationship = 'comments';
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
+    
     public static function getNavigationLabel(): string
     {
         return 'Comments';
@@ -78,13 +78,14 @@ class ManagePostComments extends ManageRelatedRecords
             ->actions([
                 Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
                 // Tables\Actions\DissociateAction::make(),
                 // Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     // Tables\Actions\DissociateBulkAction::make(),
-                    // Tables\Actions\DeleteBulkAction::make(),
+                    Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ]);
     }

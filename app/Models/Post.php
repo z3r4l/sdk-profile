@@ -39,16 +39,16 @@ class Post extends Model
         return $this->belongsTo(User::class);
     }
 
-       /** @return MorphMany<Comment> */
-       public function comments(): MorphMany
-       {
-           return $this->morphMany(Comment::class, 'commentable');
-       }
+    /** @return MorphMany<Comment> */
+    public function comments(): MorphMany
+    {
+        return $this->morphMany(Comment::class, 'commentable');
+    }
 
-       public function getRouteKeyName()
-       {
-          return 'slug';
-       }
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
     // Menambahkan event before create untuk mengisi user_id
     protected static function booted()
     {

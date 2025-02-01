@@ -20,15 +20,20 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        User::create([
-            'name'      => 'admin',
-            'email'     => 'admin@gmail.com',
-            'password'  => bcrypt('123')
-        ]);
-        User::create([
-            'name'      => 'super_admin',
-            'email'     => 'superadmin@gmail.com',
-            'password'  => bcrypt('123')
-        ]);
+        // User::create([
+        //     'name'      => 'admin',
+        //     'email'     => 'admin@gmail.com',
+        //     'password'  => bcrypt('123')
+        // ]);
+        // User::create([
+        //     'name'      => 'super_admin',
+        //     'email'     => 'superadmin@gmail.com',
+        //     'password'  => bcrypt('123')
+        // ]);
+
+        // $this->call(AchievementSeeder::class);
+        $this->call(AnnouncementSeeder::class);
+        // $this->call(CategoryAndPostSeeder::class);
+        // $this->call(FacilitySeeder::class);
     }
 }

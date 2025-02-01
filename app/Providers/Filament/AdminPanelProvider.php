@@ -18,13 +18,28 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
-
+use Filament\Navigation\MenuItem;
 class AdminPanelProvider extends PanelProvider
 {
     public function panel(Panel $panel): Panel
     {
         return $panel
             ->default()
+            // ->breadcrumbs(false)
+            // ->topNavigation()
+            ->sidebarCollapsibleOnDesktop()
+            // ->sidebarCollapsibleOnDesktop()
+            // ->collapsedSidebarWidth('9rem')
+            ->userMenuItems([
+                'profile' => MenuItem::make()->label('Ubah Profil'),
+                // ...
+            ])
+            ->navigationGroups([
+                'Kegiatan',
+                'Pelindung',
+                'Akun',
+            ])
+            ->font('Poppins')
             ->viteTheme('resources/css/filament/admin/theme.css')
             ->profile(isSimple: false)
             // ->spa()
@@ -40,12 +55,12 @@ class AdminPanelProvider extends PanelProvider
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
             ->pages([
-                Pages\Dashboard::class,
+                // Pages\Dashboard::class,
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
                 Widgets\AccountWidget::class,
-                Widgets\FilamentInfoWidget::class,
+                // Widgets\FilamentInfoWidget::class,
             ])
             ->middleware([
                 EncryptCookies::class,

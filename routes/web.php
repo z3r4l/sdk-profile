@@ -1,10 +1,12 @@
 <?php
 
+use App\Models\Achievement;
 use App\Models\Activity;
 use App\Models\Announcement;
 use App\Models\Category;
 use App\Models\Comment;
 use App\Models\Contact;
+use App\Models\Facility;
 use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
@@ -20,7 +22,8 @@ Route::get('/', function () {
     $left_announcement = $allAnnouncement->slice(0, 3); // Ambil 3 pertama
     $right__announcement = $allAnnouncement->slice(3, 1)->first(); // Ambil satu terakhir
 
-    return view('frontends.home.index', compact('left_activities', 'center_activity', 'right_activities', 'left_announcement', 'right__announcement'));
+    $allAchievement = Achievement::orderBy('published_at', 'desc')->limit(5)->get();
+    return view('frontends.home.index', compact('left_activities', 'center_activity', 'right_activities', 'left_announcement', 'right__announcement', 'allAchievement'));
 });
 
 
@@ -42,7 +45,7 @@ Route::get('/profil', function () {
 Route::get('/kegiatan', function () {
     $activity_banner = Post::with('category')->orderBy('published_at', 'desc')->limit(4)->get();
     $category        = Category::withCount('posts')->orderBy('name', 'asc')->get();
-    $posts            = Post::orderBy('published_at', 'desc')->paginate(3);
+    $posts            = Post::orderBy('published_at', 'desc')->paginate(6);
     return view('frontends.activity.index', compact('category', 'activity_banner', 'posts'));
 })->name('activity');
 
@@ -54,14 +57,29 @@ Route::get('/kegiatan/{post}', function (Post $post) {
 
 
 Route::get('/pengumuman', function () {
-    $allAnnouncement = Announcement::latest()->paginate(5);
+    $allAnnouncement = Announcement::orderBy('published_at', 'desc')->paginate(6);
     return view('frontends.announcement.index', compact('allAnnouncement'));
 })->name('announcement');
 
 Route::get('/pengumuman/{announcement}', function (Announcement $announcement) {
-    $allAnnouncement = Announcement::latest()->limit(4)->get();
+    $allAnnouncement = Announcement::orderBy('published_at', 'desc')->limit(4)->get();
     return view('frontends.announcement.detail', compact('announcement', 'allAnnouncement'));
 })->name('announcement-detail');
+
+Route::get('/fasilitas/{facility}', function (Facility $facility) {
+    // dd($facility);
+    $allFacility = Facility::latest()->limit(5)->get();
+    return view('frontends.facility.detail', compact('facility', 'allFacility'));
+})->name('facility-detail');
+
+Route::get('/prestasi', function () {
+    $allAchievement = Achievement::latest()->paginate(6);
+    return view('frontends.achievement.index', compact('allAchievement'));
+})->name('achievement');
+Route::get('/prestasi/{achievement}', function (Achievement $achievement) {
+    $allAchievement = Achievement::latest()->limit(5)->get();
+    return view('frontends.achievement.detail', compact('achievement', 'allAchievement'));
+})->name('achievement-detail');
 
 Route::post('kontak-send', function (Request $request) {
       $validated = $request->validate([

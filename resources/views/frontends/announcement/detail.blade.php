@@ -3,7 +3,7 @@
 <main>
 
     <!-- breadcrumb start -->
-    <section class="breadcrumb bg_img ul_li" data-background="{{ asset('frontends/blog_banner.jpg') }}">
+    <section class="breadcrumb bg_img ul_li" data-background="{{ asset('frontends/front_school.jpg') }}">
         <div class="container">
             <div class="breadcrumb__content text-center">
                 <h2 class="breadcrumb__title">Detail Pengumuman</h2>
@@ -64,12 +64,12 @@
                                 @foreach ($allAnnouncement as $item)
                                 <li>
                                     <div class="post_image">
-                                        <a href="blog-single.html"><img
+                                        <a href="{{ url('pengumuman/'.$item->slug) }}"><img
                                                 src="{{ url('storage/'. $item->image) }}" alt="{{ $item->image }}"></a>
                                     </div>
                                     <div class="post_holder">
                                         <h3 class="post_title border-effect-2">
-                                            <a href="blog_details.html">
+                                            <a href="{{ url('pengumuman/'.$item->slug) }}">
                                                 {{ Str::limit($item->title, 60, '...') }}
                                             </a>
                                         </h3>

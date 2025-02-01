@@ -24,7 +24,7 @@
     <!-- hero btn start -->
     <div class="hero-btns">
         <div class="btns ul_li_center">
-            <a class="thm-btn thm-btn--stroke-white sec-btn" href="#">kaya literasi
+            <span class="thm-btn sec-btn" href="#">kaya literasi
                 <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M22 4.84999V16.74C22 17.71 21.21 18.6 20.24 18.72L19.93 18.76C18.29 18.98 15.98 19.66 14.12 20.44C13.47 20.71 12.75 20.22 12.75 19.51V5.59999C12.75 5.22999 12.96 4.88999 13.29 4.70999C15.12 3.71999 17.89 2.83999 19.77 2.67999H19.83C21.03 2.67999 22 3.64999 22 4.84999Z"
@@ -33,8 +33,8 @@
                             d="M10.71 4.70999C8.87999 3.71999 6.10999 2.83999 4.22999 2.67999H4.15999C2.95999 2.67999 1.98999 3.64999 1.98999 4.84999V16.74C1.98999 17.71 2.77999 18.6 3.74999 18.72L4.05999 18.76C5.69999 18.98 8.00999 19.66 9.86999 20.44C10.52 20.71 11.24 20.22 11.24 19.51V5.59999C11.24 5.21999 11.04 4.88999 10.71 4.70999ZM4.99999 7.73999H7.24999C7.65999 7.73999 7.99999 8.07999 7.99999 8.48999C7.99999 8.90999 7.65999 9.23999 7.24999 9.23999H4.99999C4.58999 9.23999 4.24999 8.90999 4.24999 8.48999C4.24999 8.07999 4.58999 7.73999 4.99999 7.73999ZM7.99999 12.24H4.99999C4.58999 12.24 4.24999 11.91 4.24999 11.49C4.24999 11.08 4.58999 10.74 4.99999 10.74H7.99999C8.40999 10.74 8.74999 11.08 8.74999 11.49C8.74999 11.91 8.40999 12.24 7.99999 12.24Z"
                             fill="white" />
                     </svg></span>
-            </a>
-            <a class="thm-btn thm-btn--stroke-white sec-btn" href="#">unggul
+            </span>
+            <span class="thm-btn sec-btn" href="#">unggul
                 <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M16.25 19.492V20.75C16.25 21.164 15.914 21.5 15.5 21.5C15.086 21.5 14.75 21.164 14.75 20.75V19.5H16C16.084 19.5 16.167 19.497 16.25 19.492Z"
@@ -46,8 +46,8 @@
                             d="M14.75 14.288L13.552 14.95C12.608 15.472 11.392 15.472 10.448 14.95L2.134 10.356C1.568 10.043 1.25 9.49499 1.25 8.92199C1.25 8.34799 1.568 7.79999 2.134 7.48799L10.448 2.89299C11.392 2.37199 12.608 2.37199 13.552 2.89299L21.866 7.48799C22.432 7.79999 22.75 8.34799 22.75 8.92199C22.75 9.49499 22.432 10.043 21.866 10.356L16.25 13.459V12.75C16.25 12.551 16.171 12.36 16.03 12.22L12.53 8.71999C12.238 8.42699 11.762 8.42699 11.47 8.71999C11.177 9.01199 11.177 9.48799 11.47 9.77999L14.75 13.061V14.288Z"
                             fill="white" />
                     </svg></span>
-            </a>
-            <a class="thm-btn thm-btn--stroke-white sec-btn" href="#">berkarakter
+            </span>
+            <span class="thm-btn sec-btn" href="#">berkarakter
                 <span>
                     <svg width="25" height="25" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -55,7 +55,7 @@
                             fill="white"></path>
                     </svg>
                 </span>
-            </a>
+            </span>
         </div>
     </div>
     <!-- hero btn end -->
@@ -235,7 +235,7 @@
     <!-- blog section end  -->
 
     <!-- department section start  -->
-    <section class="department pt-115 pb-200 pos-rel">
+    {{-- <section class="department pt-115 pb-200 pos-rel">
         <div class="container">
             <div class="section-title text-center mb-25">
                 <span class="sub-title">Penawaran Fasililtas Kami</span>
@@ -255,7 +255,6 @@
                                     </svg>
                                 </div>
                                 <h3 class="xb-item--title">Ruang Kelas</h3>
-                                {{-- <span>Course: 20</span> --}}
                                 <a class="div-link" href="courses.html"></a>
                             </div>
                             <div class="xb-department text-center pos-rel">
@@ -292,7 +291,6 @@
                                     </svg>
                                 </div>
                                 <h3 class="xb-item--title">Perpustakaan</h3>
-                                {{-- <span>Course: 22</span> --}}
                                 <a class="div-link" href="courses.html"></a>
                             </div>
                         </div>
@@ -327,7 +325,6 @@
                                     </svg>
                                 </div>
                                 <h3 class="xb-item--title">Ruang Komputer</h3>
-                                {{-- <span>Course: 18</span> --}}
                                 <a class="div-link" href="courses.html"></a>
                             </div>
                             <div class="xb-department text-center pos-rel">
@@ -341,7 +338,6 @@
                                     </svg>
                                 </div>
                                 <h3 class="xb-item--title">Ruang Keterampilan</h3>
-                                {{-- <span>Course: 26</span> --}}
                                 <a class="div-link" href="courses.html"></a>
                             </div>
                         </div>
@@ -373,7 +369,6 @@
                                     </svg>
                                 </div>
                                 <h3 class="xb-item--title">Ruang Science Centre</h3>
-                                {{-- <span>Course: 22</span> --}}
                                 <a class="div-link" href="courses.html"></a>
                             </div>
                             <div class="xb-department text-center pos-rel">
@@ -386,7 +381,6 @@
                                     </svg>
                                 </div>
                                 <h3 class="xb-item--title">Ruang Agama Budha</h3>
-                                {{-- <span>Course: 20</span> --}}
                                 <a class="div-link" href="courses.html"></a>
                             </div>
                         </div>
@@ -415,7 +409,6 @@
                                     </svg>
                                 </div>
                                 <h3 class="xb-item--title">Ruang Agama Kristen</h3>
-                                {{-- <span>Course: 17</span> --}}
                                 <a class="div-link" href="courses.html"></a>
                             </div>
                             <div class="xb-department text-center pos-rel">
@@ -428,7 +421,6 @@
                                     </svg>
                                 </div>
                                 <h3 class="xb-item--title">Ruang Bendahara</h3>
-                                {{-- <span>Course: 18</span> --}}
                                 <a class="div-link" href="courses.html"></a>
                             </div>
                         </div>
@@ -442,11 +434,11 @@
                         src="{{ asset('frontends/assets/img/shape/cap.png') }}" alt=""></span>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- department section end  -->
 
     <!-- fanfact section start  -->
-    <section class="fanfact pos-rel">
+    {{-- <section class="fanfact pos-rel">
         <div class="container">
             <div class="fanfact-wrapper">
                 <div class="fanfact-slider swiper-container">
@@ -501,7 +493,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- fanfact section end  -->
 
     <!-- program section start  -->
@@ -727,6 +719,18 @@
                 <div class="swiper-slide">
                     <div class="xb-campus__wrapper pos-rel">
                         <div class="xb-item--img pos-rel">
+                            <img src="{{ asset('frontends/museum.jpg') }}" alt="museum"
+                                style="width: 648px; height:487px;">
+                        </div>
+                        <div class="xb-item--holder">
+                            <div class="xb-btn_thm ul_li">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="xb-campus__wrapper pos-rel">
+                        <div class="xb-item--img pos-rel">
                             <img src="{{ asset('frontends/futsal.jpg') }}" alt="futsal"
                                 style="width: 648px; height:487px;">
                         </div>
@@ -806,17 +810,20 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="tes-img">
-                                        <img src="{{ asset('frontends/history_student.jpg') }}" alt="" style="width:100%; height:533px;">
+                                        <img src="{{ asset('frontends/history_student.jpg') }}" alt=""
+                                            style="width:100%; height:533px;">
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="tes-img">
-                                        <img src="{{ asset('frontends/history_student1.jpg') }}" alt="" style="width:100%; height:533px;">
+                                        <img src="{{ asset('frontends/history_student1.jpg') }}" alt=""
+                                            style="width:100%; height:533px;">
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="tes-img">
-                                        <img src="{{ asset('frontends/history_student2.jpg') }}" alt="" style="width:100%; height:533px;">
+                                        <img src="{{ asset('frontends/history_student2.jpg') }}" alt=""
+                                            style="width:100%; height:533px;">
                                     </div>
                                 </div>
                                 {{-- <div class="swiper-slide">
@@ -979,6 +986,57 @@
     </section>
     <!-- testimonial section end  -->
 
+    <!-- program section start  -->
+    <section class="program pt-120 pb-120 bg_img event-bg-clr">
+        <div class="container">
+            <div class="program-top pos-rel">
+                <div class="section-title mb-60">
+                    <span class="sub-title">Siswa-Siswi Berprestasi</span>
+                    <h1 class="title">Siswa-Siswi Berprestasi SD Kartini II Batam</h1>
+                </div>
+                <div class="clg-testimonial-carousel">
+                    <div class="xb-arrow xb-program-prev"><img
+                            src="{{ asset('frontends/assets/img/icon/left-arrrow.png') }}" alt=""></div>
+                    <div class="xb-arrow xb-program-next"><img
+                            src="{{ asset('frontends/assets/img/icon/right-arrow01.png') }}" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <div class="clg-program-wrapper">
+            <div class="program-slider">
+                <div class="swiper-wrapper">
+                    @foreach ($allAchievement as $item)
+                    <div class="swiper-slide">
+                        <div class="clg-program_inner pos-rel">
+                            <div class="xb-item--img">
+                                <a href="{{ url('prestasi'). '/'. $item->slug }}"><img
+                                        src="{{ url('storage/'. $item->image) }}" alt="">
+                                </a>
+                            </div>
+                            <div class="xb-item--holder">
+                                <div class="xb-item--inner mr-80">
+                                    <h2 class="xb-item--tilte mb-15"><a href="{{ url('prestasi'). '/'. $item->slug }}">{{ $item->title }}</a></h2>
+                                    {{-- <ul class="xb-item--meta">
+                                        <li><img src="{{ asset('frontends/assets/img/icon/pro-book.png') }}" alt="">8
+                                            lessons</li>
+                                        <li><img src="{{ asset('frontends/assets/img/icon/pro-man.png') }}" alt="">450
+                                            students</li>
+                                    </ul> --}}
+                                </div>
+                            </div>
+                            <div class="clg-pro-btn">
+                                <a href="{{ url('prestasi'). '/'. $item->slug }}"><img
+                                        src="{{ asset('frontends/assets/img/icon/right-arrow.png') }}" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- program section end  -->
+
     <!-- event section start  -->
     <section class="event event-bg-clr pos-rel pt-115 pb-40">
         <div class="container">
@@ -994,7 +1052,7 @@
                         <div class="xb-event-left ul_li align-items-center">
                             <div class="xb-item--img pos-rel">
                                 <img src="{{ url('storage/'. $activity->image) }}"
-                                    alt="{{ url('storage/'. $activity->image) }}">
+                                    alt="{{ url('storage/'. $activity->image) }}" style="height:100%;">
                                 <span class="xb-item--date">{{ $activity->published_at }}</span>
                             </div>
                             <div class="xb-item--author">

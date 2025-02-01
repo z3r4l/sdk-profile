@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Facility extends Model
 {
@@ -10,7 +11,10 @@ class Facility extends Model
     {
         return $this->belongsTo(User::class);
     }
-
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
     protected static function booted()
     {
         static::creating(function ($post) {

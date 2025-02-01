@@ -22,8 +22,8 @@
         <div class="container">
             <div class="header__wrap ul_li_between">
                 <div class="header-logo">
-                    <a href="index.html"><img src="{{ asset('frontends/logo_sdk.png') }}" alt="Logo SD Kartini II" width="80" height="80"></a>
-                    <a href="index.html"><img src="{{ asset('frontends/logo_ykb.png') }}" alt="Logo SD Kartini II" width="80" height="80"></a>
+                    <a href="{{ route('home') }}"><img src="{{ asset('frontends/logo_sdk.png') }}" alt="Logo SD Kartini II" width="80" height="80"></a>
+                    <a href="{{ route('home') }}"><img src="{{ asset('frontends/logo_ykb.png') }}" alt="Logo SD Kartini II" width="80" height="80"></a>
                 </div>
                 <div class="main-menu__wrap ul_li navbar navbar-expand-lg">
                     <nav class="main-menu collapse navbar-collapse">
@@ -43,8 +43,13 @@
                             <li class="{{ request()->routeIs('announcement') ? 'active' : '' }}">
                                 <a href="{{ route('announcement') }}">Pengumuman</a>
                             </li>
-                            <li>
-                                <a href="contact.html">Perpustakaan</a>
+                            <li class="menu-item-has-children">
+                                <a href="#">Fasilitas</a>
+                                <ul class="submenu">
+                                    @foreach ($facilities as $item)
+                                        <li class=""><a href="{{ url('/fasilitas'. '/' . $item->slug) }}">{{ $item->title }}</a></li>
+                                    @endforeach
+                                </ul>
                             </li>
                             <li class="{{ request()->routeIs('contact') ? 'active' : '' }}">
                                 <a href="{{ route('contact') }}">Kontak</a>
@@ -56,7 +61,7 @@
                             <div class="xb-header-menu-scroll">
                                 <div class="xb-menu-close xb-hide-xl xb-close"></div>
                                 <div class="xb-logo-mobile xb-hide-xl">
-                                    <a href="index.html" rel="home"><img src="{{ asset('frontends/logo_sdk.png') }}" alt="Logo SD Kartini II"></a>
+                                    <a href="{{ route('home') }}" rel="home"><img src="{{ asset('frontends/logo_sdk.png') }}" alt="Logo SD Kartini II"></a>
                                 </div>
                                 {{-- <div class="xb-header-mobile-search xb-hide-xl">
                                     <form role="search" action="#">
@@ -78,9 +83,6 @@
                                         </li>
                                         <li class="menu-item {{ request()->routeIs('announcement') ? 'active' : '' }}">
                                             <a href="{{ route('announcement') }}">Pengumuman</a>
-                                        </li>
-                                        <li>
-                                            <a href="Perpustakaan.html">Perpustakaan</a>
                                         </li>
                                         <li class="menu-item {{ request()->routeIs('contact') ? 'active' : '' }}">
                                             <a href="{{ route('contact') }}">Kontak</a>

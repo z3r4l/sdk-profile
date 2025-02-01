@@ -3,7 +3,7 @@
 <main>
 
     <!-- breadcrumb start -->
-    <section class="breadcrumb bg_img ul_li" data-background="{{ asset('frontends/blog_banner.jpg') }}">
+    <section class="breadcrumb bg_img ul_li" data-background="{{ asset('frontends/front_school.jpg') }}">
         <div class="container">
             <div class="breadcrumb__content text-center">
                 <h2 class="breadcrumb__title">Berita Kegiatan</h2>

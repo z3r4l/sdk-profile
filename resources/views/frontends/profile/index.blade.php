@@ -3,11 +3,11 @@
 <main>
 
     <!-- breadcrumb start -->
-    <section class="breadcrumb bg_img ul_li" data-background="{{ asset('frontends/profile_banner.jpg') }}">
+    <section class="breadcrumb bg_img ul_li" data-background="{{ asset('frontends/front_school.jpg') }}">
         <div class="container">
             <div class="breadcrumb__content text-center">
-                <h2 class="breadcrumb__title" style="color: #136ac9">Profil Sekolah</h2>
-                <p class="breadcrumb__desc" style="color: #136ac9">SD Kartini II Jalan Menuju Sukses</p>
+                <h2 class="breadcrumb__title">Profil Sekolah</h2>
+                <p class="breadcrumb__desc">SD Kartini II Jalan Menuju Sukses</p>
             </div>
         </div>
     </section>
@@ -48,9 +48,9 @@
 
             </div>
             <div class="xb-video pos-rel mt-115">
-                <img src="{{ asset('frontends/assets/img/bg/video_img.jpg') }}" alt="">
-                <a class="btn-video btn-video-center popup-video" href="https://www.youtube.com/watch?v=cRXm1p-CNyk"><i
-                        class="fas fa-play"></i></a>
+                <img src="{{ asset('frontends/assets/img/bg/video_bg.png') }}" alt="">
+                <a class="btn-video btn-video-center popup-video" href="https://www.youtube.com/watch?v=9B5pX_OpsEs"><i class="fas fa-play"></i></a>
+                {{-- <a class="btn-video btn-video-center popup-video" href="https://www.youtube.com/embed/9B5pX_OpsEs?autoplay=1"><i class="fas fa-play"></i></a> --}}
             </div>
         </div>
     </section>

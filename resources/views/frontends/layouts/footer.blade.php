@@ -104,7 +104,7 @@
         </div>
         <div class="footer-bottom pb-25 pt-25">
             <div class="copyright text-center">
-                <p>Copyright © 2024 <a href="index.html">SD KARTINI II</a>. All rights reserved.</p>
+                <p>Copyright © 2024 <a href="{{ route('home') }}">SD KARTINI II</a>. All rights reserved.</p>
             </div>
         </div>
     </div>

@@ -30,9 +30,16 @@ use BezhanSalleh\FilamentShield\Contracts\HasShieldPermissions;
 class PostResource extends Resource implements HasShieldPermissions
 {
     protected static ?string $model = Post::class;
-
+    protected static ?string $navigationGroup = 'Kegiatan';
     protected static ?string $navigationIcon = 'heroicon-o-folder-open';
+    protected static ?string $navigationLabel = 'Postingan';
+    protected static ?string $modelLabel = 'Postingan';
     protected static SubNavigationPosition $subNavigationPosition = SubNavigationPosition::Top;
+    
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
+    }
     public static function getPermissionPrefixes(): array
     {
         return [
@@ -74,6 +81,7 @@ class PostResource extends Resource implements HasShieldPermissions
                                 '2xl' => 4,
                             ]),
                         DatePicker::make('published_at')
+                            ->label('Tanggal')
                             ->native(false)
                             ->displayFormat('d-M-Y')
                             ->columnSpan([
@@ -148,8 +156,12 @@ class PostResource extends Resource implements HasShieldPermissions
                     ->numeric()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('title')
+                    ->limit(50)
                     ->searchable(),
-                Tables\Columns\TextColumn::make('slug')
+                // Tables\Columns\TextColumn::make('slug')
+                //     ->limit(50)
+                //     ->searchable(),
+                Tables\Columns\TextColumn::make('published_at')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
@@ -166,12 +178,14 @@ class PostResource extends Resource implements HasShieldPermissions
             ->actions([
                 Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
-            ]);
+            ])
+            ->defaultSort('published_at', 'desc');
     }
 
     public static function getRelations(): array

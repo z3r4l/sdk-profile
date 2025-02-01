@@ -3,7 +3,7 @@
 <main>
 
     <!-- breadcrumb start -->
-    <section class="breadcrumb bg_img ul_li" data-background="{{ asset('frontends/blog_banner.jpg') }}">
+    <section class="breadcrumb bg_img ul_li" data-background="{{ asset('frontends/front_school.jpg') }}">
         <div class="container">
             <div class="breadcrumb__content text-center">
                 <h2 class="breadcrumb__title">Detail Kegiatan</h2>
@@ -42,14 +42,14 @@
                         <div class="comment_area">
                             <h3 class="details_item_info_title mb-5">Komentar({{ $post->comments->count() }})</h3>
                             <ul class="comments_list unordered_list_block">
-                                @foreach ($post->comments as $item)
+                                @foreach ($post->comments->where('is_visible', 1) as $item)
                                 <li>
                                     <div class="comment_item">
                                         <div class="comment_author_thumbnail">
                                             <img src="{{ asset('frontends/default.png') }}" alt="">
                                         </div>
                                         <div class="comment_author_content">
-                                            <h4 class="comment_author_name">John Smith</h4>
+                                            <h4 class="comment_author_name">{{ $item->nama }}</h4>
                                             <div class="comment_time">{{
                                                 \Carbon\Carbon::parse($item->created_at)->diffForHumans() }}</div>
                                             <p class="mb-0">
@@ -88,7 +88,7 @@
                                                     class="text-primary">*</sup></label>
                                             <input id="input_name"
                                                 class="form-control @error('nama') is-invalid @enderror" type="text"
-                                                name="nama" placeholder="Goladra Gomaz" value="{{ old('nama') }}"
+                                                name="nama" placeholder="John Doe" value="{{ old('nama') }}"
                                                 required>
                                             @error('nama')
                                             <span class="text-danger">{{ $message }}</span>
@@ -103,7 +103,7 @@
                                                     class="text-primary">*</sup></label>
                                             <input id="input_email"
                                                 class="form-control @error('email') is-invalid @enderror" type="email"
-                                                name="email" placeholder="edubost@example.com"
+                                                name="email" placeholder="contoh@gmail.com"
                                                 value="{{ old('email') }}" required>
                                             @error('email')
                                             <span class="text-danger">{{ $message }}</span>

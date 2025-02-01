@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('no_hp');
             $table->text('message')->nullable();
-            $table->boolean('is_visible')->default(false);
+            $table->boolean('is_visible')->default(true);
             $table->timestamps();
         });
     }

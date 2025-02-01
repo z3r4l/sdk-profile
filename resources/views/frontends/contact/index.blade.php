@@ -3,11 +3,11 @@
 <main>
 
     <!-- breadcrumb start -->
-    <section class="breadcrumb bg_img ul_li" data-background="{{ asset('frontends/contact_banner.jpg') }}">
+    <section class="breadcrumb bg_img ul_li" data-background="{{ asset('frontends/front_school.jpg') }}">
         <div class="container">
             <div class="breadcrumb__content text-center">
-                <h2 class="breadcrumb__title" style="color: #136ac9">Kontak Kami</h2>
-                <p class="breadcrumb__desc" style="color: #136ac9">Hubungi Sekolah kami</p>
+                <h2 class="breadcrumb__title">Kontak Kami</h2>
+                <p class="breadcrumb__desc">Hubungi Sekolah kami</p>
             </div>
         </div>
     </section>
@@ -79,12 +79,12 @@
                                             <span class="text-danger">{{ $message }}</span>
                                         @enderror
                                     </div>
-                                    <button type="submit" class="thm-btn">Kirim Pesan
-                                        <span>
+                                    <button type="submit" class="thm-btn">Kirim Pesan <i class="fa fa-paper-plane ms-2" aria-hidden="true"></i>
+                                        {{-- <span>
                                             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M13.0364 2.63798..." fill="#170006"></path>
                                             </svg>
-                                        </span>
+                                        </span> --}}
                                     </button>
                                 </div>
                             </div>
